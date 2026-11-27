@@ -1,0 +1,95 @@
+{
+  "name": "nexroute",
+  "version": "0.1.0",
+  "description": "A local-first desktop app for AI-generated project roadmaps",
+  "desktopName": "dev.nexroute.desktop",
+  "private": true,
+  "type": "module",
+  "main": "desktop/main.cjs",
+  "scripts": {
+    "dev": "node scripts/dev.js",
+    "dev:renderer": "vite --host 127.0.0.1",
+    "site:dev": "vite website --config website/vite.config.js",
+    "build": "vite build",
+    "site:build": "vite build website --config website/vite.config.js",
+    "build:all": "npm run build",
+    "package": "npm run build && electron-builder --publish never",
+    "package:dir": "npm run build && electron-builder --dir --publish never",
+    "test": "node --test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.0.7",
+    "electron": "^45.5.0",
+    "electron-builder": "^26.0.0"
+  },
+  "overrides": {
+    "minimatch": "^11.0.1",
+    "@electron/asar@3.4.1": {
+      "minimatch": "^3.1.5",
+      "glob": {
+        "minimatch": "^3.1.5"
+      }
+    },
+    "glob@7.2.3": {
+      "minimatch": "^3.1.5"
+    },
+    "dir-compare@4.2.0": {
+      "minimatch": "^3.1.5"
+    },
+    "filelist@1.0.6": {
+      "minimatch": "^5.1.9"
+    }
+  },
+  "build": {
+    "appId": "dev.nexroute.desktop",
+    "productName": "NexRoute",
+    "asar": true,
+    "publish": null,
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "desktop/**/*",
+      "package.json"
+    ],
+    "artifactName": "NexRoute-${os}-${arch}.${ext}",
+    "linux": {
+      "target": [
+        "AppImage"
+      ],
+      "artifactName": "NexRoute-linux-x86_64.${ext}",
+      "syncDesktopName": true,
+      "category": "Development",
+      "icon": "assets/nexroute.png"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "artifactName": "NexRoute-win-x64.${ext}",
+      "icon": "assets/nexroute.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "deleteAppDataOnUninstall": false
+    },
+    "mac": {
+      "target": [
+        "dmg"
+      ],
+      "artifactName": "NexRoute-mac-${arch}.${ext}",
+      "icon": "assets/nexroute.icns",
+      "category": "public.app-category.developer-tools",
+      "hardenedRuntime": true
+    }
+  }
+}

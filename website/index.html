@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08090a" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'; frame-src 'none'"
+    />
+    <meta
+      name="description"
+      content="NexRoute turns a project brief into a Gemini-generated roadmap and keeps saved plans on your device."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>NexRoute — Project roadmaps, made real</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="NexRoute home">
+        <img src="./favicon.svg" width="28" height="28" alt="" />
+        <span>NexRoute</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#ai-showcase">AI ecosystem</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#download">Download</a>
+        <a class="nav-cta" href="#download">Get NexRoute <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <div class="overline"><span class="status-dot"></span> A LOCAL-FIRST AI PROJECT PLANNER</div>
+          <h1>From brief<br /><span>to real roadmap.</span></h1>
+          <p class="hero-lede">
+            Get a practical, Gemini-generated plan for the work ahead. Your roadmap stays on your device;
+            your brief goes to Google only when you ask for a plan.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#download">Get the desktop app <span aria-hidden="true">↗</span></a>
+            <a class="button button-quiet" href="#how-it-works">See how it works <span aria-hidden="true">↓</span></a>
+          </div>
+          <div class="hero-footnote"><span class="platform-mark">⌘</span> Windows, macOS &amp; Linux <i></i> Gemini API <i></i> Local plan storage</div>
+        </div>
+
+        <div class="scene-panel">
+          <div class="scene-topline"><span>THE NEXROUTE FLOW</span><span>INTERACTIVE · DRAG TO EXPLORE</span></div>
+          <div class="route-scene" data-route-scene>
+            <div class="scene-space">
+              <div class="scene-halo halo-one"></div>
+              <div class="scene-halo halo-two"></div>
+              <svg class="scene-wires" viewBox="0 0 640 330" preserveAspectRatio="none" aria-hidden="true">
+                <path id="route-path-main" d="M92 159 C190 159 174 102 278 102 S385 164 465 164 S526 223 570 223" />
+                <path class="wire-secondary" d="M92 159 C190 159 195 248 278 248 S385 164 465 164" />
+                <circle class="scene-packet" r="3.5">
+                  <animateMotion data-route-motion begin="indefinite" dur="6.5s" repeatCount="indefinite">
+                    <mpath href="#route-path-main" />
+                  </animateMotion>
+                </circle>
+              </svg>
+              <button class="scene-node node-brief" type="button" data-scene-step="brief" data-title="Project brief" data-description="Your brief stays local until you submit a request to generate a roadmap." aria-pressed="true">
+                <span class="node-symbol">01</span><span class="node-copy"><small>INPUT</small><strong>Project brief</strong></span>
+              </button>
+              <button class="scene-node node-gemini is-active" type="button" data-scene-step="gemini" data-title="Google Gemini" data-description="Gemini processes the brief through your saved API key when you choose Generate." aria-pressed="false">
+                <span class="node-symbol gemini-symbol">G</span><span class="node-copy"><small>AI PROVIDER</small><strong>Gemini</strong></span>
+              </button>
+              <button class="scene-node node-roadmap" type="button" data-scene-step="roadmap" data-title="Validated roadmap" data-description="NexRoute checks the response structure and shows the ordered tasks, priorities, and AI time estimates." aria-pressed="false">
+                <span class="node-symbol">03</span><span class="node-copy"><small>OUTPUT</small><strong>Roadmap</strong></span>
+              </button>
+              <button class="scene-node node-device" type="button" data-scene-step="device" data-title="Local plan library" data-description="Saved roadmaps remain in your desktop app's local data. NexRoute has no cloud sync or analytics." aria-pressed="false">
+                <span class="node-symbol">04</span><span class="node-copy"><small>STORAGE</small><strong>Your device</strong></span>
+              </button>
+            </div>
+          </div>
+          <div class="scene-detail" aria-live="polite">
+            <span class="detail-mark"><span class="status-dot"></span></span>
+            <div><strong data-scene-title>Project brief</strong><p data-scene-description>Your brief stays local until you submit a request to generate a roadmap.</p></div>
+            <span class="detail-index" data-scene-index>01 / 04</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="trust-strip">
+        <div class="wrap trust-items">
+          <span><i class="trust-icon">01</i> Gemini-powered planning</span>
+          <span><i class="trust-icon">02</i> No simulated quotas</span>
+          <span><i class="trust-icon">03</i> Plans stored locally</span>
+        </div>
+      </section>
+
+      <section id="ai-showcase" class="provider-showcase">
+        <div class="wrap provider-layout">
+          <div class="provider-copy">
+            <div class="overline muted">A WIDER AI LANDSCAPE</div>
+            <h2>Many models.<br /><span>One honest integration.</span></h2>
+            <p>This animated provider cloud is a visual showcase, not a list of connected services. NexRoute currently sends roadmap requests to Google Gemini only.</p>
+            <span class="showcase-note"><i class="status-dot"></i> VISUAL SHOWCASE · GEMINI BACKEND</span>
+          </div>
+          <div class="provider-stage" aria-hidden="true">
+            <div class="provider-orbit orbit-wide"></div>
+            <div class="provider-orbit orbit-tall"></div>
+            <div class="provider-core"><img src="./favicon.svg" width="31" height="31" alt="" /><span>NEXROUTE</span></div>
+            <span class="provider-chip"><img src="./assets/providers/openai.svg" alt="" />OpenAI</span>
+            <span class="provider-chip"><img src="./assets/providers/claude-color.svg" alt="" />Claude</span>
+            <span class="provider-chip"><img src="./assets/providers/gemini-color.svg" alt="" />Gemini</span>
+            <span class="provider-chip"><img src="./assets/providers/grok.svg" alt="" />Grok</span>
+            <span class="provider-chip"><img src="./assets/providers/deepseek-color.svg" alt="" />DeepSeek</span>
+            <span class="provider-chip"><img src="./assets/providers/mistral-color.svg" alt="" />Mistral</span>
+            <span class="provider-chip"><img src="./assets/providers/meta.svg" alt="" />Meta Llama</span>
+            <span class="provider-chip"><img src="./assets/providers/qwen-color.svg" alt="" />Qwen</span>
+            <span class="provider-chip"><img src="./assets/providers/cohere-color.svg" alt="" />Cohere</span>
+            <span class="provider-chip"><img src="./assets/providers/perplexity-color.svg" alt="" />Perplexity</span>
+            <span class="provider-chip"><img src="./assets/providers/groq.svg" alt="" />Groq</span>
+            <span class="provider-chip"><img src="./assets/providers/cerebras-color.svg" alt="" />Cerebras</span>
+            <span class="provider-chip"><img src="./assets/providers/openrouter-color.svg" alt="" />OpenRouter</span>
+            <span class="provider-chip"><img src="./assets/providers/fireworks-color.svg" alt="" />Fireworks</span>
+            <span class="provider-chip"><img src="./assets/providers/together-color.svg" alt="" />Together AI</span>
+            <span class="provider-chip"><img src="./assets/providers/ai21.svg" alt="" />AI21</span>
+            <span class="provider-chip"><img src="./assets/providers/sambanova-color.svg" alt="" />SambaNova</span>
+            <span class="provider-chip"><img src="./assets/providers/metaai-color.svg" alt="" />Meta AI</span>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="section wrap">
+        <div class="section-intro">
+          <div class="overline muted">A CLEAR, PRACTICAL WORKFLOW</div>
+          <h2>Every step has a job.<br /><span>Nothing is a placeholder.</span></h2>
+          <p>NexRoute focuses on turning your own project brief into an actionable roadmap—not on predicting provider capacity it cannot see.</p>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-index">01 / DESCRIBE</span><div class="step-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5h14M5 10h10M5 15h14M5 20h8"/></svg></div><h3>Start with your outcome</h3><p>Describe what you want to build and set a target deadline. NexRoute sends this brief only when you choose to generate.</p></article>
+          <article class="step-card"><span class="step-index">02 / GENERATE</span><div class="step-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2 6 6 3-6 2-2 7-2-7-6-2 6-3 2-6Z"/></svg></div><h3>Use Google Gemini</h3><p>Your encrypted API key stays in the desktop app. Google receives the brief and deadline for the actual roadmap request.</p></article>
+          <article class="step-card"><span class="step-index">03 / REVIEW</span><div class="step-symbol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 4 4L19 6"/><path d="M20 12v7H4V5h11"/></svg></div><h3>Keep the plan close</h3><p>Review the ordered tasks and AI-generated estimates, then return to saved plans stored on your device.</p></article>
+        </div>
+      </section>
+
+      <section id="privacy" class="principles">
+        <div class="wrap principles-layout">
+          <div><div class="overline muted">BUILT FOR CONTROL</div><h2>Honest about what’s real.<br /><span>Private by default.</span></h2></div>
+          <div class="principle-list">
+            <article><span>01</span><div><h3>No invented provider limits</h3><p>NexRoute does not fetch account quota or usage data, so it displays no balances, usage percentages, reset schedules, or token forecasts.</p></div></article>
+            <article><span>02</span><div><h3>You choose when to send a brief</h3><p>The app sends a project brief to Google only when you generate a roadmap. Google's free-tier data-use rules and any billing settings still apply.</p></div></article>
+            <article><span>03</span><div><h3>Roadmaps remain on your device</h3><p>Keys are encrypted using the operating system's credential store. Plans are saved locally; NexRoute has no hosted account, sync, or analytics service.</p></div></article>
+          </div>
+        </div>
+      </section>
+
+      <section id="download" class="download-section wrap">
+        <div class="download-heading">
+          <div class="overline muted">DESKTOP BUILDS</div>
+          <h2>Choose your platform.</h2>
+          <p>Download the latest installer for Windows, Linux, or your Mac. Separate builds are available for Intel and Apple silicon.</p>
+        </div>
+        <div class="download-grid">
+          <article class="download-card"><div class="platform-icon">⊞</div><div class="platform-copy"><h3>Windows</h3><p>64-bit · NSIS installer</p><span class="platform-detail">Windows 10 or later</span></div><a data-download="win-x64" data-download-label="Windows" href="#download" aria-disabled="true">Not published</a></article>
+          <article class="download-card"><div class="platform-icon">◉</div><div class="platform-copy"><h3>macOS</h3><p>Intel &amp; Apple Silicon · DMG</p><span class="platform-detail">Unsigned builds may show Gatekeeper warnings</span></div><div class="platform-downloads"><a data-download="mac-arm64" data-download-label="Apple silicon" href="#download" aria-disabled="true">Not published</a><a data-download="mac-x64" data-download-label="Intel Mac" href="#download" aria-disabled="true">Not published</a></div></article>
+          <article class="download-card"><div class="platform-icon">◌</div><div class="platform-copy"><h3>Linux</h3><p>x86_64 · AppImage</p><span class="platform-detail">No system installation required</span></div><a data-download="linux-x64" data-download-label="Linux" href="#download" aria-disabled="true">Not published</a></article>
+        </div>
+        <p id="release-note" class="release-note" role="status">Downloads become available after the first desktop release is published.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap footer-main">
+        <a class="brand footer-brand" href="#top"><img src="./favicon.svg" width="25" height="25" alt="" /><span>NexRoute</span></a>
+        <p>Plan the work. Keep it real.</p>
+        <a href="#top" class="back-to-top">Back to top ↑</a>
+      </div>
+      <div class="wrap footer-bottom"><span>GEMINI API · LOCAL PLAN STORAGE</span><span>NO TRACKING · NO MOCK QUOTAS</span></div>
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

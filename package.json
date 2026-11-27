@@ -1,6 +1,6 @@
 {
   "name": "nexroute",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A local-first desktop app for AI-generated project roadmaps",
   "desktopName": "dev.nexroute.desktop",
   "private": true,

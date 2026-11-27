@@ -21,7 +21,7 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1",
+    "react-dom": "^19.3.1",
     "vite": "^6.0.7",
     "electron": "^45.5.0",
     "electron-builder": "^26.0.0"

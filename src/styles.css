@@ -251,3 +251,113 @@ a { color: inherit; text-decoration: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* Keep everyday copy comfortable to read while leaving compact metadata distinct. */
+:root { font-family: "SF Pro Display", "SF Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+.nav-item { font-size: 14px; }
+.workspace-label, .eyebrow { font-size: 11px; }
+.sidebar-note strong { font-size: 13px; }
+.sidebar-note p, .user-copy span, .user-copy strong, .breadcrumbs, .provider-status { font-size: 12px; }
+.brand { font-size: 16px; }
+.content-area { font-size: 15px; }
+.hero-copy > p { font-size: 16px; }
+.hero-meta { font-size: 12px; }
+.section-heading h2, .results-heading h2 { font-size: 20px; }
+.privacy-chip, .deadline-select, .deadline-select select, .primary-button, .secondary-button { font-size: 13px; }
+.planner-card textarea, .settings-form > input { font-size: 15px; }
+.metric-label { font-size: 10px; }
+.metric-foot, .ai-roadmap-summary, .ai-task-copy > span, .roadmap-disclaimer, .loading-state, .empty-state p, .page-title p, .settings-disclosure p, .settings-local-note, .privacy-consent { font-size: 13px; }
+.ai-task-copy strong, .settings-provider-heading strong, .settings-form > label:first-child, .settings-disclosure strong, .saved-plan-copy strong { font-size: 14px; }
+.settings-provider-heading span:not(.connection-status), .settings-key-actions > span, .saved-plan-copy span { font-size: 12px; }
+.theme-toggle { min-height: 32px; padding: 0 10px; border: 1px solid var(--border); border-radius: 6px; color: inherit; background: var(--surface-raised); font-size: 13px; cursor: pointer; }
+.theme-toggle:hover { border-color: #68716a; }
+
+html[data-theme="light"] {
+  color-scheme: light;
+  color: #202820;
+  background: #f4f6f4;
+}
+html[data-theme="light"] body { color: #202820; background: #f4f6f4; }
+html[data-theme="light"] .sidebar,
+html[data-theme="light"] .topbar,
+html[data-theme="light"] .app-footer { border-color: #dce2dc; background: #edf0ed; }
+html[data-theme="light"] .sidebar { border-right-color: #dce2dc; }
+html[data-theme="light"] .brand-mark { color: #f4f6f4; background: #202820; }
+html[data-theme="light"] .version-pill,
+html[data-theme="light"] .theme-toggle,
+html[data-theme="light"] .secondary-button,
+html[data-theme="light"] .deadline-select select { border-color: #d3dad3; color: #344036; background: #fff; }
+html[data-theme="light"] .nav-item { color: #59645b; }
+html[data-theme="light"] .nav-item:hover,
+html[data-theme="light"] .nav-item.active { color: #202820; background: #e2e8e2; box-shadow: inset 0 0 0 1px #d4ddd4; }
+html[data-theme="light"] .sidebar-note,
+html[data-theme="light"] .planner-card,
+html[data-theme="light"] .panel,
+html[data-theme="light"] .metric-card,
+html[data-theme="light"] .settings-card,
+html[data-theme="light"] .ai-roadmap { border-color: #dce2dc; background: linear-gradient(135deg, #fff, #f8faf8); }
+html[data-theme="light"] .user-row,
+html[data-theme="light"] .saved-plan-row,
+html[data-theme="light"] .settings-local-note { border-color: #dce2dc; }
+html[data-theme="light"] .breadcrumbs,
+html[data-theme="light"] .build-tag,
+html[data-theme="light"] .workspace-label,
+html[data-theme="light"] .eyebrow,
+html[data-theme="light"] .muted-eyebrow,
+html[data-theme="light"] .hero-meta,
+html[data-theme="light"] .metric-label,
+html[data-theme="light"] .metric-foot,
+html[data-theme="light"] .page-title p,
+html[data-theme="light"] .settings-provider-heading span:not(.connection-status),
+html[data-theme="light"] .settings-key-actions > span,
+html[data-theme="light"] .saved-plan-copy span,
+html[data-theme="light"] .app-footer { color: #657067; }
+html[data-theme="light"] .breadcrumbs strong,
+html[data-theme="light"] .section-heading h2,
+html[data-theme="light"] .ai-roadmap-heading h3,
+html[data-theme="light"] .ai-task-copy strong,
+html[data-theme="light"] .settings-provider-heading strong,
+html[data-theme="light"] .settings-form > label:first-child,
+html[data-theme="light"] .saved-plan-copy strong,
+html[data-theme="light"] .user-copy strong { color: #202820; }
+html[data-theme="light"] .hero h1 span { color: #58635a; }
+html[data-theme="light"] .hero-copy > p,
+html[data-theme="light"] .ai-roadmap-summary,
+html[data-theme="light"] .ai-task-copy > span,
+html[data-theme="light"] .empty-state p,
+html[data-theme="light"] .loading-state,
+html[data-theme="light"] .settings-local-note,
+html[data-theme="light"] .sidebar-note p { color: #59645b; }
+html[data-theme="light"] .planner-card textarea,
+html[data-theme="light"] .settings-form > input { border-color: #d3dad3; color: #202820; background: #fff; }
+html[data-theme="light"] .planner-card textarea::placeholder { color: #78837a; }
+html[data-theme="light"] .privacy-chip { border-color: #d3dad3; color: #4e5b50; }
+html[data-theme="light"] .settings-disclosure,
+html[data-theme="light"] .migration-notice { border-color: #e6d6ad; color: #624f25; background: #fff9e9; }
+html[data-theme="light"] .settings-disclosure strong { color: #574414; }
+html[data-theme="light"] .settings-disclosure p,
+html[data-theme="light"] .privacy-consent { color: #675a37; }
+html[data-theme="light"] .roadmap-deadline,
+html[data-theme="light"] .roadmap-disclaimer { color: #59645b; }
+html[data-theme="light"] .provider-logo,
+html[data-theme="light"] .avatar { border-color: #d3dad3; color: #334536; background: #edf2ed; }
+html[data-theme="light"] .empty-mark,
+html[data-theme="light"] .saved-plan-icon { border-color: #d4dfd4; color: #347044; background: #edf5ee; }
+html[data-theme="light"] .ai-task { border-color: #e1e6e1; }
+html[data-theme="light"] .empty-state { border-color: #cbd4cb; background: #f8faf8; }
+html[data-theme="light"] .topbar-divider { background: #ccd4cc; }
+html[data-theme="light"] .orbit { border-color: #cbd4cb; }
+html[data-theme="light"] .orbit-center,
+html[data-theme="light"] .orbit-node { border-color: #d1d9d1; color: #344036; background: #fff; }
+
+@media (max-width: 560px) {
+  .hero-copy > p { font-size: 14px; }
+  .hero-meta { font-size: 11px; }
+  .section-heading h2 { font-size: 18px; }
+  .privacy-chip { font-size: 11px; }
+  .metric-label { font-size: 9px; }
+  .metric-foot { font-size: 10px; }
+  .page-title p { font-size: 13px; }
+  .topbar-right { gap: 7px; }
+  .theme-toggle { min-height: 30px; padding-inline: 8px; font-size: 12px; }
+}

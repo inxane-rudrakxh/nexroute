@@ -1,5 +1,22 @@
 import "./styles.css";
 
+const themeToggle = document.querySelector("#theme-toggle");
+const savedTheme = localStorage.getItem("nexroute-theme");
+let theme = savedTheme === "light" ? "light" : "dark";
+
+function applyTheme() {
+  document.documentElement.dataset.theme = theme;
+  themeToggle.textContent = theme === "dark" ? "☼ Light" : "☾ Dark";
+  themeToggle.setAttribute("aria-label", `Switch to ${theme === "dark" ? "light" : "dark"} theme`);
+}
+
+applyTheme();
+themeToggle.addEventListener("click", () => {
+  theme = theme === "dark" ? "light" : "dark";
+  localStorage.setItem("nexroute-theme", theme);
+  applyTheme();
+});
+
 const repository = import.meta.env.VITE_GITHUB_REPOSITORY ?? "";
 const validRepository = /^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(repository);
 const releaseNote = document.querySelector("#release-note");

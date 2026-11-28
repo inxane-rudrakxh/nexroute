@@ -33,6 +33,7 @@ function Icon({ name, size = 17 }) {
 
 function App() {
   const [activeView, setActiveView] = useState("overview");
+  const [theme, setTheme] = useState(() => localStorage.getItem("nexroute-theme") === "light" ? "light" : "dark");
   const [idea, setIdea] = useState("");
   const [daysAvailable, setDaysAvailable] = useState(5);
   const [plans, setPlans] = useState([]);
@@ -54,6 +55,11 @@ function App() {
     [plans, selectedId],
   );
   const selectedTaskCount = selectedPlan?.aiPlan.tasks.length ?? 0;
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    localStorage.setItem("nexroute-theme", theme);
+  }, [theme]);
 
   useEffect(() => {
     if (!window.nexroute) {
@@ -270,7 +276,7 @@ function App() {
       <main className="main-panel">
         <header className="topbar">
           <div className="breadcrumbs"><span>Workspace</span><span className="crumb-slash">/</span><strong>{navigation.find((item) => item.id === activeView)?.label ?? "Overview"}</strong></div>
-          <div className="topbar-right"><span className="provider-status"><span className={`live-dot ${providerStatus.configured ? "" : "disconnected"}`} /> {providerStatus.configured ? "Gemini key saved" : "Gemini not connected"}</span><span className="topbar-divider" /><span className="build-tag">v0.1.0</span></div>
+          <div className="topbar-right"><button className="theme-toggle" type="button" onClick={() => setTheme((current) => current === "dark" ? "light" : "dark")} aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} theme`}>{theme === "dark" ? "☼ Light" : "☾ Dark"}</button><span className="provider-status"><span className={`live-dot ${providerStatus.configured ? "" : "disconnected"}`} /> {providerStatus.configured ? "Gemini key saved" : "Gemini not connected"}</span><span className="topbar-divider" /><span className="build-tag">v0.1.0</span></div>
         </header>
         <div className="content-area">
           {migrationNotice && <div className="migration-notice" role="status">{migrationNotice}</div>}
